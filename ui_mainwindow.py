@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'ui/mainwindow.ui'
+# Form implementation generated from reading ui file 'mainwindow.ui'
 #
-# Created: Sat Jun 27 17:34:59 2009
+# Created: Sat Jun 27 18:54:42 2009
 #      by: PyQt4 UI code generator 4.4.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -28,9 +28,9 @@ class Ui_MainWindow(object):
         self.verticalLayout_2.addLayout(self.horizontalLayout_2)
         self.horizontalLayout = QtGui.QHBoxLayout()
         self.horizontalLayout.setObjectName("horizontalLayout")
-        self.tableView = QtGui.QTableView(self.centralwidget)
-        self.tableView.setObjectName("tableView")
-        self.horizontalLayout.addWidget(self.tableView)
+        self.itemTable = QtGui.QTableView(self.centralwidget)
+        self.itemTable.setObjectName("itemTable")
+        self.horizontalLayout.addWidget(self.itemTable)
         self.verticalLayout = QtGui.QVBoxLayout()
         self.verticalLayout.setObjectName("verticalLayout")
         self.startButton = QtGui.QPushButton(self.centralwidget)
