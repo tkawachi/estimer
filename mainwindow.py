@@ -13,7 +13,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     def openNewDialog(self):
         diag = NewDialog()
-        help(diag)
         diag.setAttribute(Qt.WA_DeleteOnClose)
         rv = diag.exec_()
         print rv
