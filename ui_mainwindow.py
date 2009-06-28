@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'mainwindow.ui'
 #
-# Created: Sat Jun 27 18:54:42 2009
+# Created: Sun Jun 28 00:55:15 2009
 #      by: PyQt4 UI code generator 4.4.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -29,6 +29,9 @@ class Ui_MainWindow(object):
         self.horizontalLayout = QtGui.QHBoxLayout()
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.itemTable = QtGui.QTableView(self.centralwidget)
+        self.itemTable.setSelectionMode(QtGui.QAbstractItemView.SingleSelection)
+        self.itemTable.setSelectionBehavior(QtGui.QAbstractItemView.SelectRows)
+        self.itemTable.setSortingEnabled(True)
         self.itemTable.setObjectName("itemTable")
         self.horizontalLayout.addWidget(self.itemTable)
         self.verticalLayout = QtGui.QVBoxLayout()
@@ -61,6 +64,12 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
         self.actionQuit = QtGui.QAction(MainWindow)
         self.actionQuit.setObjectName("actionQuit")
+        self.actionSave = QtGui.QAction(MainWindow)
+        self.actionSave.setObjectName("actionSave")
+        self.actionLoad = QtGui.QAction(MainWindow)
+        self.actionLoad.setObjectName("actionLoad")
+        self.menuFile.addAction(self.actionSave)
+        self.menuFile.addAction(self.actionLoad)
         self.menuFile.addAction(self.actionQuit)
         self.menubar.addAction(self.menuFile.menuAction())
 
@@ -76,4 +85,6 @@ class Ui_MainWindow(object):
         self.newButton.setText(QtGui.QApplication.translate("MainWindow", "New", None, QtGui.QApplication.UnicodeUTF8))
         self.menuFile.setTitle(QtGui.QApplication.translate("MainWindow", "File", None, QtGui.QApplication.UnicodeUTF8))
         self.actionQuit.setText(QtGui.QApplication.translate("MainWindow", "Quit", None, QtGui.QApplication.UnicodeUTF8))
+        self.actionSave.setText(QtGui.QApplication.translate("MainWindow", "Save", None, QtGui.QApplication.UnicodeUTF8))
+        self.actionLoad.setText(QtGui.QApplication.translate("MainWindow", "Load", None, QtGui.QApplication.UnicodeUTF8))
 

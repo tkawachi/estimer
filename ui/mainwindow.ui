@@ -32,7 +32,17 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="QTableView" name="itemTable"/>
+       <widget class="QTableView" name="itemTable">
+        <property name="selectionMode">
+         <enum>QAbstractItemView::SingleSelection</enum>
+        </property>
+        <property name="selectionBehavior">
+         <enum>QAbstractItemView::SelectRows</enum>
+        </property>
+        <property name="sortingEnabled">
+         <bool>true</bool>
+        </property>
+       </widget>
       </item>
       <item>
        <layout class="QVBoxLayout" name="verticalLayout">
@@ -96,6 +106,8 @@
     <property name="title">
      <string>File</string>
     </property>
+    <addaction name="actionSave"/>
+    <addaction name="actionLoad"/>
     <addaction name="actionQuit"/>
    </widget>
    <addaction name="menuFile"/>
@@ -104,6 +116,16 @@
   <action name="actionQuit">
    <property name="text">
     <string>Quit</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionLoad">
+   <property name="text">
+    <string>Load</string>
    </property>
   </action>
  </widget>
